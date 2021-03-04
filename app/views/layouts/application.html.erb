@@ -11,24 +11,68 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  <nav class="navbar navbar-light bg-light">
+  
   <div class="container-fluid">
     <h1 class="text-center">Thoughts and Prayers</h1>
   </div>
-</nav>
- 
-    <div class="row">
-      <div class="col-md-4">
-      <br><br><br>
-        <%= image_tag "enoch_portal.png", class: 'col-md-4', style: 'height: 100%; width: 100%;' %>
-        <%= image_tag "Thoughts-and-Prayers2.jpg", class: 'col-md-4', style: 'height: 600px; width: 600px;' %>
-      </div>
-        <div class="col-md-4">
-        <%= image_tag "thoughts-and-prayers.jpg", class: '', style: 'height: 600px; width: 600px; position: absolute; left: 900px;' %>
-        <%= image_tag "Prayer-Light.jpg", class: '', style: 'height: 600px; width: 600px; position: absolute; left: 900px; top: 750px' %>
-        <%= yield %>
-        </div>
+
+
+<div class="container">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <%= image_tag "Condolence-Messages.jpg", class: "d-block w-100" %>
+    
     </div>
+ 
+    <div class="carousel-item">
+       <%= image_tag "thoughts-and-prayers.jpg", class: "d-block w-100" %>
+     
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "best-wishes-flower.jpg", class: "d-block w-100" %>
+     
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "condolence-card.jpg", class: "d-block w-100" %>
+     
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "Prayer-Light.jpg", class: "d-block w-100" %>
+     
+    </div>
+
+       <div class="carousel-item">
+       <%= image_tag "enoch.jpg", class: "d-block w-100" %>
+    
+    </div>
+    <div class="carousel-item">
+       <%= image_tag "enoch_portal.png", class: "d-block w-100" %>
+     
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <%= yield %>
+</div>
+       
+  
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -41,3 +85,13 @@
     -->
   </body>
 </html>
+<style>
+.carousel-item{
+    height: 700px;
+  width: 100%;
+} 
+.carousel-item img{
+    height: 700px;
+    width: 100%;
+}
+</style>
