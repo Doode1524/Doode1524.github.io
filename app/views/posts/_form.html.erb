@@ -10,18 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+  <div class="col-md-5">
+  <div class="mb-3">
+    <%= form.label :author, class: "form-label" %>
+    <%= form.text_field :author, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
+<div class="mb-3">
+     <%= form.label :content, class: "form-label" %>
+    <%= form.text_area :content, class: "form-control" %>
+</div>
     <%= form.submit %>
+  </div>
   </div>
 <% end %>
